@@ -13,16 +13,14 @@ import java.util.Scanner;
 public class ejercicio3 {
     
      public static void main(String[] args) {
-        // se declara el input para leer los datos 
-        Scanner input = new Scanner(System.in);
         
-        // se declara la variable que va a alojar la edad
+        Scanner scan = new Scanner(System.in);
+        
         int edad; 
         String etapaVida = "";
         
-        // Le pedimos al usuario que ingrese su edad.
         System.out.println("Ingrese su edad:");
-        edad = Integer.parseInt(input.nextLine());
+        edad = Integer.parseInt(scan.nextLine());
         
         if(edad < 12) {
             etapaVida = "Niño";

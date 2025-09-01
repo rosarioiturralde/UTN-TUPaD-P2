@@ -12,24 +12,20 @@ import java.util.Scanner;
 public class ejercicio4 {
     
      public static void main(String[] args) {
-        // esta linea se usa para declara que va a haber un objeto input
-        Scanner input = new Scanner(System.in);
         
-        // varables
+        Scanner scan = new Scanner(System.in);
+        
         int precio;
         double precioConDescuento;
         char categoria;
         
-        // Pedimos el precio al usuario
         System.out.println("Ingrese el precio del producto");
-        precio = Integer.parseInt(input.nextLine());
+        precio = Integer.parseInt(scan.nextLine());
         
-        // Pedimos la categoria al usuario
-        System.out.println("Ingrese la categoria del producto (A, B o C)");
-        categoria = input.nextLine().charAt(0);
+        System.out.println("Ingrese la categoria: A, B o C)");
+        categoria = scan.nextLine().charAt(0);
         
-        // Utilizamos un switch para manejar las condiciones segun la categoria ingresada
-        switch (categoria) {
+            switch (categoria) {
             case 'A':
             case 'a':
                 precioConDescuento = precio -(precio * 0.10);
